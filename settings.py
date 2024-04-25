@@ -3,16 +3,16 @@ SPRITE_DIR_PATH = "resources/art/sprites"
 FONTS_DIR_PATH = "resources/fonts"
 AUDIO_DIR_PATH = "resources/audio"
 
-# Debug 
+# Debug
 DEBUG_FONT_SIZE = 24
 GRAPH_WIDTH = 200
 GRAPH_HEIGHT = 120
 GRAPH_MARGIN = 5
-NUM_FRAME_SAMPLES = 60
+NUM_FRAME_SAMPLES = 1000
 
 # Game Settings
 WIN_SIZE = WIN_W, WIN_H = 1280, 720
 FONT_SIZE = 40
 
 GAME_NAME = "ARPG"
-TARGET_FPS = 60.0
+TARGET_FPS = 120.0

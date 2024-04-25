@@ -1,0 +1,55 @@
+exclude = [
+    ".aws-sam",
+    ".DS_Store",
+    ".git",
+    ".pytest_cache",
+    ".ruff_cache",
+    ".svn",
+    ".venv",
+    ".vscode",
+    "site-packages",
+    "venv",
+    "setup.py",
+    # Test code is not verified
+    "app/tests"
+]
+
+line-length = 120
+indent-width = 4
+
+target-version = "py311"
+
+[format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = true
+
+[lint]
+# https://docs.astral.sh/ruff/rules/
+select = ["F", "E3", "E4", "E7", "E9", "W1", "W2", "W3", "C90", "N", "UP", "YTT", "ANN", "ASYNC", "C4", "T20", "RET", "SLF", "SIM", "PL"]
+
+# E402: Imports always on top
+# E712: Avoid equality comparisons for booleans
+# UP006, UP035: Usage of Tuple, Dict, List instead of tuple, dict, list
+# ANN002, ANN003: Type annotation for *args, **kwargs
+# ANN101, ANN102: Type annotation for self, cls
+# ANN2: Missing return type annotation for functions
+# ANN401: Usage of `Any` type
+# RET505: Unnecessary else after return
+# RET506: Unnecessary else after raise
+# SIM117: Use a single `with` statement with multiple contexts instead of nested `with` statements
+# SIM910: Use `dict.get('key')` instead of `dict.get('key', None)`
+# PLW0603: Usage of global variables
+# PLR0911: Too many return statements
+# PLR0912: Too many branches
+# PLR0915: Too many statements
+ignore = ["E402", "E712", "UP006", "UP035", "ANN002", "ANN003", "ANN101", "ANN102", "ANN2", "ANN401", "RET505", "RET506", "SIM117", "SIM910", "PLW0603", "PLR0911", "PLR0912", "PLR0915"]
+
+[lint.mccabe]
+max-complexity = 15
+
+[lint.flake8-annotations]
+suppress-none-returning = true
+
+[lint.pylint]
+max-args = 20

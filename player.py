@@ -1,4 +1,5 @@
 from typing import Any
+
 import arcade
 
 
@@ -12,8 +13,7 @@ class Player(arcade.Sprite):
         angle: float = 0,
         **kwargs: Any,
     ):
-        super(Player, self).__init__(path_or_texture, scale, center_x, center_y, angle, **kwargs)
-    
+        super().__init__(path_or_texture, scale, center_x, center_y, angle, **kwargs)
+
     def on_update(self, delta_time: float = 1 / 60) -> None:
         super().on_update(delta_time)
-    

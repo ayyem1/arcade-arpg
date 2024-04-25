@@ -1,6 +1,6 @@
 import arcade
-from game import GameWindow
 
+from game import GameWindow
 
 if __name__ == "__main__":
     game_window = GameWindow()
